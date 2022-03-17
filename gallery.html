@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Gallery |DEC</title>
+		<meta name="description" content="Some link hover effect that reveal a thumbnail in different creative ways." />
+		<meta name="keywords" content="slideshow, reveal, effect, animation, web design, template, demo" />
+		<meta name="author" content="Codrops" />
+	  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+		<link rel="stylesheet" href="https://use.typekit.net/ljn4kgu.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/baseGallery.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+
+		<div class="cursor"></div>
+		<div class="cursor-border"></div>
+
+		<main>
+		<div class="frame">
+
+		<div class="frame__links">
+		<a href="index.html" class="frame__demo">Home</a>
+		<a href="about.html" class="frame__demo">About</a>
+		<a href="services.html" class="frame__demo">Services</a>
+		<a href="gallery.html" class="frame__demo frame__demo--current">Gallery</a>
+		<a href="contact/index.html" class="frame__demo">Contact</a>
+		</div>
+
+		</div>
+
+  	<div class="content">
+
+				<div class="block" data-fx="22">
+					<a href="model/index.html" class="block__title cursor-scale small" data-img="img/33.png">3d Design</a>
+					<a class="block__link" data-img="img/characters.png">Characters</a>
+					<a class="block__link" data-img="img/32.jpg">Interior</a>
+					<a class="block__link" data-img="img/42.jpg">Product&Modelling</a>
+					<a class="block__link" data-img="img/4.jpg">Environment</a>
+				</div>
+
+				<div class="block" data-fx="22">
+					<a href="webDesign/dist/index3.html" class="block__title cursor-scale small" data-img="img/6.jpg">Web Design</a>
+					<a class="block__link" data-img="img/7.jpg">One Page</a>
+					<a class="block__link" data-img="img/8.jpg">Website</a>
+					<a class="block__link" data-img="img/9.jpg">Restaurant Menu</a>
+					<a class="block__link" data-img="img/12.jpg">Graphic </a>
+				</div>
+
+			<div class="block" data-fx="22">
+					<a href="visualMerchandising.html"class="block__title cursor-scale small" data-img="img/11.jpg">Visual <br>Merch.sing</a>
+					<a class="block__link" data-img="img/3.jpg">Window Displays</a>
+					<a class="block__link" data-img="img/13.jpg">Scenographic Elements</a>
+					<a class="block__link" data-img="img/15.jpg">Design</a>
+					<a class="block__link" data-img="img/14.jpg">Virtual Gallery</a>
+				</div>
+
+			<div class="block" data-fx="22">
+					<a href="graphic.html"class="block__title cursor-scale small" data-img="img/21.jpg">Graphic Design</a>
+					<a class="block__link" data-img="img/23.jpg">Branding</a>
+					<a class="block__link" data-img="img/18.jpg">Promotional Marketing</a>
+					<a class="block__link" data-img="img/2.jpg">Packaging Design</a>
+					<a class="block__link" data-img="img/25.jpg">Promotional Branded Products</a>
+				</div>
+				</div>
+
+		</main>
+		<script src="js/charming.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+  </html>
+
+
+	<!--
+
+	/*MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNx,    .l0WMMMMMMM
+	lllllllllloodxkOKXWMMMMMMMMMMMWXKKKKKXXXXXXNNNNNNNWMMMMMMMMMMKc.       .oKWMMMMM
+	                ..;lONMMMMMMMMNl..............''',dNMMMMMMMWO,           'xNMMMM
+	                     'dXMMMMMMMk.                 ,KMMMMMMM0,             .oNMMM
+	                       'xNMMMMMX:                 .kMMMMMMNc               .oNMM
+	                        .cXMMMMMx.                .dWMMMMMk.                .dWM
+	                          ;KMMMMK;                 cNMMMMX:                  'OM
+	                           ;KMMMWo                 ;XMMMMO.                   cN
+	                            :XMMM0'                ,KMMMWd                    .O
+	                             oNMMN:                .OMMMX:                     o
+	                             .OMMWd.               .kMMM0'                     :
+	              .,,.            cNMMO.               .xMMMx.                     '
+	              'OWO;           .OMMK,               .dMMWo                      .
+	              .xMM0'           oWMNc                dWMX:        .lx,          .
+	               oWMNl           :NMWo                dWMK,        cNWo
+	               cNMMx.          ,KMWd.               dWMk.       .xMWd.
+	               ;XMMO.          '0MMx.         .'.  .dWMx.       '0MWd
+	               ,KMM0'          .OMMx.        .kNX0kxKMWo        ;XMWl
+	               '0MMK,          .OMMx.        .OMMMMMMMN:        cNMN:
+	               '0MMK,          '0MWd.        '0MMMMMMMK,        oWMK,
+	               ,KMM0,          ,KMWl         ,KMMMMMMMO.       .xMMO.
+	               ;XMMO.          :NMX:         :NMMMMMMWd        .OMMx.
+	               cNMMk.          oWM0'         oWMMMMMMNc        ,KMWo
+	               lWMWo          .kMMx.        .kMMMMMMM0,        cNMNc
+	              .dMMNc          ,KMNc         ,0MMMMMMMx.        oWMX;
+	              .kMMK,          lWM0'         lNMMMMMMNc        .kMM0'
+	              '0MMk.         .kMWd.         ,x0NWMMM0'        ,KMMk.           .
+	              ;XMWo          :XMX;            ..c0MWd.        cNMWd         .:d0
+	              lNMX:         .dWMk.              '0MX:         dWMNc    .':oOXWMM
+	             .dMM0'         ,KMNc               oWMk.        .OMMNo,:lx0NWMMMMMM
+	             .kMMk.         oWMO.              '0MNc         ,KMMWNNMMMMMMMMMMMM
+	             ,0MWo         .OMNc               lNMO.         cNMMMMMMMMMMMMMMMMM
+	             :XMX:         cNMO'              .OMWl         .xMMMMMMMMMMMMMMMMMM
+	             lWM0'        .kMWo               cNM0,         '0MMMMMMMMMMMMMMMMMM
+	            .xMMx.        ;XMK,        ';'.  .kMWd.         ;XMMMMMMMMMMMMMMMMMM
+	            .OMWl         dWWx.       ,KWN0xlxNMX;          oWMMMMMMMMMMMMMMMMMM
+	            ,KMX:        'OMNc        oWMMMMMMMMk.         .xMMMMMMMMMMMMMWX0koc
+	            :XM0'        :XM0'       .kMMMMMMMMWo          '0MMMWNXX0Okdl:,..
+	            lWMk.        dWMx.       ;KMMMMMMMMX;          ;XMMWx,...
+	           .dWWo        .OMWo        cNMMMMMMMMO.          cNMMN:
+	           .kMNc        ,KMN:        dWMMMMMMMMx.          oWMMX;
+	           '0MK;        :NMK,       .kMMMMMMMMWo          .dMMMK,
+	           ;KMO.        oWM0'       .OMMMMMMMMWo          .xMMMK,
+	           :NWd.       .xMMO.       '0MMMMMMMMWl          .xMMMK,
+	           lWX:        .kMMk.       '0MMMMMMMMWo          .dWMMX;
+	           dWx.        .OMMx.        ,ldxk0XNMMx.          lWMMNc
+	          .co.         ,KMMx.             ..:KMO.          cNMMWo              .
+	                       ;XMMx.               .kMK;          ,KMMMd.             .
+	                       :NMMx.                oWWo          .xMMMx.             '
+	                       lWMMk.                cNMO'          :XMMx.             :
+	                       oWMMk.                '0MNl           ;xk;              o
+	                      .xMMMO'                .xMMK,                           .k
+	                      .OMMMK,                 cNMWk.                          :X
+	                      ;KMMMX;                 '0MMWd.                        .xW
+	                      oWMMMNc                  oWMMNd.                       cNM
+	                     '0MMMMWd                  ,KMMMWx.                     ,0MM
+	                    .xWMMMMMk.                 .dWMMMWO,                   'OWMM
+	                   .xNMMMMMM0,                  ,KMMMMMXo.                'kWMMM
+	           .....,:dKWMMMMMMMNd''''...............xWMMMMMW0c.             ,OWMMMM
+	loodxxkkOO00KKXNWWMMMMMMMMMMMWNNNNNNXXXXXXKKKKK00XWMMMMMMMW0o'.        .oXMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx;.    .c0WMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWXOkKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	
+	............................................................................../*
+
+	  -->
