@@ -1,0 +1,271 @@
+
+body {
+	margin: 0;
+	--color-frame-bg: #00cbff;
+	--color-text: #fff;
+  --color-bg: #00cbff;
+  --color-link: #000000;
+  --color-link-hover: #fff;
+  --color-menu: #fff;
+  --color-menu-hover: #ff42ae;
+  --color-menu-deco: #ffffff;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  --cursor-stroke: none;
+  --cursor-fill: #ff42ae;
+  --cursor-stroke-width: 1px;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: ivymode, sans-serif;
+}
+
+/* custom cursor style*/
+
+.cursor,
+.cursor-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: 0.3s;
+  z-index: 99999999;
+}
+
+.cursor {
+  background: black;
+
+}
+
+.cursor-border {
+  padding: 2rem;
+  border: 0.1rem solid black;
+
+}
+.cursor-border.on-focus {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+}
+
+
+/*backButton*/
+p {
+  color: #fff;
+  font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+	height: 10px;
+	padding-left: 80px;
+}
+
+p:hover{
+	color:#ff42ae;
+}
+
+p span {
+  display: inline-block;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 500;
+          perspective: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+p span::before,
+p span::after {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  content: attr(data-text);
+}
+
+p span::before {
+  z-index: 1;
+  color: rgba(0,0,0,0.2);
+  -webkit-transform: scale(1.1, 1) skew(0deg, 20deg);
+          transform: scale(1.1, 1) skew(0deg, 20deg);
+}
+
+p span::after {
+  z-index: 2;
+  color: #00cbff;
+  text-shadow: -1px 0 1px #6699ff, 1px 0 1px rgba(0,0,0,0.8);
+  -webkit-transform: rotateY(-40deg);
+          transform: rotateY(-40deg);
+}
+
+p span:hover::before {
+  -webkit-transform: scale(1.1, 1) skew(0deg, 5deg);
+          transform: scale(1.1, 1) skew(0deg, 5deg);
+}
+
+p span:hover::after {
+  -webkit-transform: rotateY(-10deg);
+          transform: rotateY(-10deg);
+}
+
+p span + span {
+  margin-left: 0.3em;
+}
+
+@media (min-width: 20em) {
+  p {
+    font-size: 1em;
+  }
+  p span::before,
+  p span::after {
+    display: block;
+  }
+}
+@media (min-width: 30em) {
+  p {
+    font-size: 2em;
+  }
+}
+@media (min-width: 40em) {
+  p {
+    font-size: 3em;
+  }
+}
+@media (min-width: 60em) {
+  p {
+    font-size: 6em;
+  }
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Canela", sans-serif;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* FLEXBOX */
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-fd-c {
+  flex-direction: column;
+}
+
+nav {
+  min-height: 100vh;
+  overflow: hidden;
+}
+nav ul {
+  min-height: 50vh;
+  width: 60%;
+}
+@media (max-width: 768px) {
+  nav ul {
+    width: 93%;
+  }
+}
+nav ul li {
+  border-bottom: solid #ffffff 0.05rem;
+  position: relative;
+  z-index: 10;
+}
+nav ul li a {
+  display: block;
+  padding: 4rem 0 2rem 0;
+  z-index: 10;
+}
+nav ul li a span {
+  display: block;
+  font-weight: 500;
+  z-index: 10;
+  mix-blend-mode: difference;
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  nav ul li a span {
+    font-size: 2.5rem;
+  }
+}
+nav ul li a > img {
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  nav ul li a > img {
+    height: 18px;
+  }
+}
+
+.hover-reveal {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease-out;
+}
+@media (max-width: 768px) {
+  .hover-reveal {
+    width: 220px;
+    height: 300px;
+  }
+}
+.hover-reveal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.4s ease-out;
+}
