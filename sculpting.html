@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer  bounds="tight" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"  shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar"></div>
+    <div class="arrowRight">  <a  href="index.html"> <i class="fa"></i></a></div>
+    <div class="title"><h1>David</h1>  </div>
+    <div class="arrowLeft">  <a  href="indexb.html"> <i class="fa">&#xf105;</i></a></div>
+    </model-viewer>
+
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </body>
+</html>
+<!--
+
+/*MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNx,    .l0WMMMMMMM
+lllllllllloodxkOKXWMMMMMMMMMMMWXKKKKKXXXXXXNNNNNNNWMMMMMMMMMMKc.       .oKWMMMMM
+                ..;lONMMMMMMMMNl..............''',dNMMMMMMMWO,           'xNMMMM
+                     'dXMMMMMMMk.                 ,KMMMMMMM0,             .oNMMM
+                       'xNMMMMMX:                 .kMMMMMMNc               .oNMM
+                        .cXMMMMMx.                .dWMMMMMk.                .dWM
+                          ;KMMMMK;                 cNMMMMX:                  'OM
+                           ;KMMMWo                 ;XMMMMO.                   cN
+                            :XMMM0'                ,KMMMWd                    .O
+                             oNMMN:                .OMMMX:                     o
+                             .OMMWd.               .kMMM0'                     :
+              .,,.            cNMMO.               .xMMMx.                     '
+              'OWO;           .OMMK,               .dMMWo                      .
+              .xMM0'           oWMNc                dWMX:        .lx,          .
+               oWMNl           :NMWo                dWMK,        cNWo
+               cNMMx.          ,KMWd.               dWMk.       .xMWd.
+               ;XMMO.          '0MMx.         .'.  .dWMx.       '0MWd
+               ,KMM0'          .OMMx.        .kNX0kxKMWo        ;XMWl
+               '0MMK,          .OMMx.        .OMMMMMMMN:        cNMN:
+               '0MMK,          '0MWd.        '0MMMMMMMK,        oWMK,
+               ,KMM0,          ,KMWl         ,KMMMMMMMO.       .xMMO.
+               ;XMMO.          :NMX:         :NMMMMMMWd        .OMMx.
+               cNMMk.          oWM0'         oWMMMMMMNc        ,KMWo
+               lWMWo          .kMMx.        .kMMMMMMM0,        cNMNc
+              .dMMNc          ,KMNc         ,0MMMMMMMx.        oWMX;
+              .kMMK,          lWM0'         lNMMMMMMNc        .kMM0'
+              '0MMk.         .kMWd.         ,x0NWMMM0'        ,KMMk.           .
+              ;XMWo          :XMX;            ..c0MWd.        cNMWd         .:d0
+              lNMX:         .dWMk.              '0MX:         dWMNc    .':oOXWMM
+             .dMM0'         ,KMNc               oWMk.        .OMMNo,:lx0NWMMMMMM
+             .kMMk.         oWMO.              '0MNc         ,KMMWNNMMMMMMMMMMMM
+             ,0MWo         .OMNc               lNMO.         cNMMMMMMMMMMMMMMMMM
+             :XMX:         cNMO'              .OMWl         .xMMMMMMMMMMMMMMMMMM
+             lWM0'        .kMWo               cNM0,         '0MMMMMMMMMMMMMMMMMM
+            .xMMx.        ;XMK,        ';'.  .kMWd.         ;XMMMMMMMMMMMMMMMMMM
+            .OMWl         dWWx.       ,KWN0xlxNMX;          oWMMMMMMMMMMMMMMMMMM
+            ,KMX:        'OMNc        oWMMMMMMMMk.         .xMMMMMMMMMMMMMWX0koc
+            :XM0'        :XM0'       .kMMMMMMMMWo          '0MMMWNXX0Okdl:,..
+            lWMk.        dWMx.       ;KMMMMMMMMX;          ;XMMWx,...
+           .dWWo        .OMWo        cNMMMMMMMMO.          cNMMN:
+           .kMNc        ,KMN:        dWMMMMMMMMx.          oWMMX;
+           '0MK;        :NMK,       .kMMMMMMMMWo          .dMMMK,
+           ;KMO.        oWM0'       .OMMMMMMMMWo          .xMMMK,
+           :NWd.       .xMMO.       '0MMMMMMMMWl          .xMMMK,
+           lWX:        .kMMk.       '0MMMMMMMMWo          .dWMMX;
+           dWx.        .OMMx.        ,ldxk0XNMMx.          lWMMNc
+          .co.         ,KMMx.             ..:KMO.          cNMMWo              .
+                       ;XMMx.               .kMK;          ,KMMMd.             .
+                       :NMMx.                oWWo          .xMMMx.             '
+                       lWMMk.                cNMO'          :XMMx.             :
+                       oWMMk.                '0MNl           ;xk;              o
+                      .xMMMO'                .xMMK,                           .k
+                      .OMMMK,                 cNMWk.                          :X
+                      ;KMMMX;                 '0MMWd.                        .xW
+                      oWMMMNc                  oWMMNd.                       cNM
+                     '0MMMMWd                  ,KMMMWx.                     ,0MM
+                    .xWMMMMMk.                 .dWMMMWO,                   'OWMM
+                   .xNMMMMMM0,                  ,KMMMMMXo.                'kWMMM
+           .....,:dKWMMMMMMMNd''''...............xWMMMMMW0c.             ,OWMMMM
+loodxxkkOO00KKXNWWMMMMMMMMMMMWNNNNNNXXXXXXKKKKK00XWMMMMMMMW0o'.        .oXMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx;.    .c0WMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWXOkKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+............................................................................../*
+
+  -->
