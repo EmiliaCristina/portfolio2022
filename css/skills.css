@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+
+}
+
+:root {
+	font-size: 15px;
+}
+
+body {
+	margin: 0;
+	--color-bg: #ff42ae;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+
+}
+
+
+.screen {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+}
+
+.fold-scroller {
+	height: 100%;
+}
+
+.fold-content {
+	pointer-events: all;
+	width: 100%;
+}
+
+.fold-size-fix {
+	width: 100%;
+	height: 100%;
+}
+
+.fold-before .fold-size-fix {
+	transform-origin: bottom center;
+}
+
+.fold-after .fold-size-fix {
+	transform-origin: top center;
+}
+
+#base-content {
+	display: none;
+}
+
+/*  Debug */
+.debug .fold:nth-child(2n) {
+	background: #dadada;
+}
+
+.debug .fold:nth-child(2n + 1) {
+	background: #bababa;
+}
+
+.btn-debug {
+	position: fixed;
+	top: 10px;
+	padding: 1rem;
+	font-size: 16px;
+	text-transform: uppercase;
+	right: 10px;
+	cursor: pointer;
+	z-index: 100;
+	display: none;
+}
+
+
+
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+}
+
+.js .loading::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5, 0.5, 1);
+	}
+}
+.content {
+
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: calc(100vh - 13rem);
+	position: relative;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+
+  /*mainMenu*/
+  .frame {
+  	padding: 3rem 5vw;
+  	text-align: center;
+  	font-size: 20px;
+  }
+
+
+
+  a {
+  	text-decoration: none;
+
+  }
+
+  a:hover,
+  a:focus {
+  	color: #00cbff;
+  }
+
+  /*backButton*/
+  p {
+    color: #fff;
+    font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+  	height: 10px;
+  }
+
+  p:hover{
+  	color:#00cbff;
+  }
+
+  p span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-perspective: 500;
+            perspective: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+  p span::before,
+  p span::after {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transition: all ease-out 0.3s;
+    transition: all ease-out 0.3s;
+    content: attr(data-text);
+  }
+  p span::before {
+    z-index: 1;
+    color: rgba(0,0,0,0.2);
+    -webkit-transform: scale(1.1, 1) skew(0deg, 20deg);
+            transform: scale(1.1, 1) skew(0deg, 20deg);
+  }
+  p span::after {
+    z-index: 2;
+    color: #ff42ae;
+    text-shadow: -1px 0 1px #6699ff, 1px 0 1px rgba(0,0,0,0.8);
+    -webkit-transform: rotateY(-40deg);
+            transform: rotateY(-40deg);
+  }
+  p span:hover::before {
+    -webkit-transform: scale(1.1, 1) skew(0deg, 5deg);
+            transform: scale(1.1, 1) skew(0deg, 5deg);
+  }
+  p span:hover::after {
+    -webkit-transform: rotateY(-10deg);
+            transform: rotateY(-10deg);
+  }
+  p span + span {
+    margin-left: 0.3em;
+  }
+  @media (min-width: 20em) {
+    p {
+      font-size: 1em;
+    }
+    p span::before,
+    p span::after {
+      display: block;
+    }
+  }
+  @media (min-width: 30em) {
+    p {
+      font-size: 2em;
+    }
+  }
+  @media (min-width: 40em) {
+    p {
+      font-size: 3em;
+    }
+  }
+  @media (min-width: 60em) {
+    p {
+      font-size: 6em;
+    }
+  }
+	.frame {
+		padding: 1rem 5vw;
+		text-align: center;
+		position: relative;
+		z-index: 1000;
+	}
+
+	/* custom cursor style*/
+
+	.cursor,
+	.cursor-border {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 0.4rem;
+	  height: 0.4rem;
+	  border-radius: 50%;
+	  pointer-events: none;
+	  opacity: 0;
+	  will-change: transform;
+	  transition: 0.3s;
+	  z-index: 99999999;
+	}
+
+	.cursor {
+	  background: black;
+
+	}
+
+	.cursor-border {
+	  padding: 2rem;
+	  border: 0.1rem solid black;
+
+	}
+	.cursor-border.on-focus {
+	  padding: 0.5rem;
+	  background: rgba(255, 255, 255, 0.5);
+	  border-color: transparent;
+	}

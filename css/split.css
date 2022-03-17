@@ -1,0 +1,109 @@
+body {
+  --color-bg: #00cbff;
+  --color-text: #000000;
+  --color-link: #000000;
+  --color-link-hover: #fff;
+}
+
+.content__type {
+  font-size: 7vw;
+  margin: 0 auto;
+  text-align: justify;
+  font-family: condor-compressed, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 5rem 0;
+  line-height: 1;
+  backface-visibility: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+  background-size: 80%;
+}
+
+.white {
+
+  color: white;
+}
+
+.content__type-special {
+  font-size: 29vw;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.content__type-speciala {
+  font-size: 15vw;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #FF1493;
+}
+
+.content__img {
+  width: 100%;
+  display: block;
+  backface-visibility: hidden;
+}
+
+/* Effect Styles */
+
+.fold-scroller {
+  /* Twice the fold's width */
+  width: 60vw;
+}
+
+.fold {
+  overflow: hidden;
+  height: 60vh;
+  /*  half the fold-scroller width */
+  width: 30vw;
+}
+/* center fold + both side folds need to add up to 100vh  */
+.fold-before,
+.fold-after {
+  height: 20vh;
+}
+
+.side-left .fold-before-1 {
+  transform: skewX(40deg);
+}
+
+.side-left .fold-after-1 {
+  transform: skewX(-40deg);
+}
+
+.side-right .fold-before-1 {
+  transform: skewX(-40deg);
+}
+
+.side-right .fold-after-1 {
+  transform: skewX(40deg);
+}
+
+/* Required a is for the effect */
+.wrapper-3d {
+  position: relative;
+  perspective: 250px;
+  transform-style: preserve-3d;
+}
+
+.fold-after {
+  position: absolute;
+  transform-origin: top center;
+  right: 0;
+  left: 0;
+  top: calc(100%);
+}
+
+.fold-before {
+  position: absolute;
+  transform-origin: bottom center;
+  left: 0;
+  right: 0;
+  bottom: calc(100%);
+}

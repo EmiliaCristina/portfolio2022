@@ -1,0 +1,815 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+
+html { background: #00cbff; font: normal 1em/1.5 "Canela"; color: #fff; text-align: center; height: 100%; }
+body { height: 100%;cursor: none;    // hide mouse layout }
+
+#video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+video { display: block; width: auto; height: cover;}
+
+.fullsize-video-bg { height: 100%; overflow: hidden; }
+.fullsize-video-bg:before { content: "";  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+.fullsize-video-bg:after { content: "";  background-size: 3px 3px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.fullsize-video-bg .inner { display: table; width: 100%;  height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2;  }
+.fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
+
+/* custom cursor style*/
+
+.cursor,
+.cursor-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: 0.3s;
+  z-index: 99999999;
+}
+
+.cursor {
+  background: black;
+
+}
+
+.cursor-border {
+  padding: 2rem;
+  border: 0.1rem solid black;
+
+}
+.cursor-border.on-focus {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+}
+
+
+.glass-panel {
+  position: fixed;
+ top: 50%;
+ left: 50%;
+ /* bring your own prefixes */
+ transform: translate(-50%, -50%);
+
+  max-width: 474px;
+  color: #fff;
+  background-color:rgba(108, 122, 137,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  width:100%;
+  height: auto;
+  border-radius:15px;
+  padding:32px ;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+
+}
+
+.glass-button {
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: 'Canela';
+  z-index: 100699;
+  margin: 15px;
+  margin-top: 40px;
+}
+
+.glass-button:hover {
+  color:#fbec3f;
+  text-transform: uppercase;
+}
+
+span{
+  color: #fbec3f;
+}
+
+
+h1, h1 a {
+  width: 90%;
+  max-width: 700px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 3% auto;
+  text-decoration: none;
+  color: black;
+  font-size: 60px;
+}
+
+.MyName{
+  line-height:60px;
+  width: 90%;
+  max-width: 700px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 3% auto;
+  text-decoration: none;
+  color: black;
+  font-size: 60px;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  vertical-align: middle;
+  text-align: center;
+  margin: 3% auto;
+}
+
+ul li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 45px rgba(255,255,255,0.1);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+ul li a:hover {
+  transform: translateY(-20px);
+  color: #fbec3f;
+}
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+
+ul li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+
+
+/*skillsAnimation*/
+.hello-parent {
+  display: flex;
+  background: transparent;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .hello-word {
+    display: none;
+  }
+}
+.hello-word {
+  margin:2%;
+}
+/* H Animation */
+
+.H-left-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: H-left-move 20s ease forwards;
+}
+
+.H-mid-stroke {
+  stroke-dasharray: 37px;
+  stroke-dashoffset: 37px;
+  animation: H-mid-move 9s ease forwards;
+}
+
+.H-right-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: H-right-move 13s ease forwards;
+}
+
+@keyframes H-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes H-mid-move {
+  0% {
+    stroke-dashoffset: 37px;
+  }
+  5% {
+    stroke-dashoffset: 37px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes H-right-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 124px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* E Animation */
+
+.E-left-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: E-left-move 20s ease forwards;
+}
+
+.E-top-stroke {
+  stroke-dasharray: 47px;
+  stroke-dashoffset: 47px;
+  animation: E-top-move 10s ease forwards;
+}
+
+.E-mid-stroke {
+  stroke-dasharray: 42px;
+  stroke-dashoffset: 42px;
+  animation: E-mid-move 10s ease forwards;
+}
+
+.E-bottom-stroke {
+  stroke-dasharray: 47px;
+  stroke-dashoffset: 47px;
+  animation: E-bottom-move 10s ease forwards;
+}
+
+@keyframes E-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes E-top-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  6% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes E-mid-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  8% {
+    stroke-dashoffset: 42px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes E-bottom-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 47px;
+  }
+  16% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* L One Animation */
+
+.L-one-long-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: L-one-long-move 20s ease forwards;
+}
+
+.L-one-short-stroke {
+  stroke-dasharray: 44px;
+  stroke-dashoffset: 44px;
+  animation: L-one-short-move 10s ease forwards;
+}
+
+@keyframes L-one-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes L-one-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  13% {
+    stroke-dashoffset: 44px;
+  }
+  18% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* L Two Animation */
+
+.L-two-long-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  animation: L-two-long-move 20s ease forwards;
+}
+
+.L-two-short-stroke {
+  stroke-dasharray: 44px;
+  stroke-dashoffset: 44px;
+  animation: L-two-short-move 10s ease forwards;
+}
+
+@keyframes L-two-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  3% {
+    stroke-dashoffset: 124px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes L-two-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  15% {
+    stroke-dashoffset: 44px;
+  }
+  20% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* O Animation */
+
+.O-stroke {
+  stroke-dasharray: 302px;
+  stroke-dashoffset: 302px;
+  animation: O-move 20s ease forwards;
+}
+
+@keyframes O-move {
+  0% {
+    stroke-dashoffset: 302px;
+  }
+  4% {
+    stroke-dashoffset: 302px;
+  }
+  9% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* Red Dot Animation */
+
+.red-dot {
+  stroke-width: 44px;
+  stroke-linecap: round;
+  animation: red-dot-grow 8s ease-out forwards;
+}
+
+@keyframes red-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 44px;
+  }
+  100% {
+    stroke-width: 44px;
+  }
+}
+
+/*StikerSkill*/
+.anim750{
+  transition: all 750ms ease-in-out;
+}
+
+#Awesome{
+	position: relative;
+	width: 280px;
+	height: 280px;
+	margin:0 120px;
+z-index: 9999;
+  backface-visibility: hidden;
+}
+
+#Awesome .sticky{
+	transform: rotate(45deg);
+}
+
+#Awesome:hover .sticky{
+	transform: rotate(10deg);
+}
+
+#Awesome .sticky{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:180px;
+	height: 180px;
+}
+
+#Awesome .reveal .circle{
+	box-shadow: 0 1px 0px rgba(0,0,0,.15);
+
+  font-family: 'Canela', arial;
+  font-weight: 200;
+  line-height: 140px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+#Awesome .reveal .circle{
+	background: #fea6ff;
+
+}
+
+#Awesome .circle_wrapper{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+
+#Awesome .circle{
+	position: absolute;
+	width: 140px;
+	height:  140px;
+	margin: 20px;
+color: black;
+	border-radius: 999px;
+}
+
+#Awesome .back{
+	height: 10px;
+	top: 30px;
+}
+
+#Awesome:hover .back{
+	height: 90px;
+	top: 110px;
+}
+
+#Awesome .back .circle{
+	margin-top: -130px;
+	background-color: #fbec3f;
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255,255,255,.8));
+}
+
+#Awesome:hover .back .circle{
+	margin-top: -50px;
+
+}
+
+#Awesome .front{
+	height: 150px;
+	bottom: 0;
+	top: auto;
+
+	-webkit-box-shadow: 0 -140px 20px -140px rgba(0,0,0,.3);
+}
+
+#Awesome:hover .front{
+	height: 70px;
+
+	-webkit-box-shadow: 0 -60px 10px -60px rgba(0,0,0,.1);
+}
+
+#Awesome .front .circle{
+	margin-top: -10px;
+	background: #fbec3f;
+
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  background-image: -moz-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  background-image: linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+}
+
+#Awesome h4{
+  font-family: 'Canela', arial;
+  font-weight: 200;
+  text-align: center;
+	position: absolute;
+	width: 180px;
+	height: 140px;
+  line-height: 140px;
+color: black;
+	transition: opacity 50ms linear 400ms;
+}
+
+#Awesome:hover h4{
+	opacity: 0;;
+	transition: opacity 50ms linear 300ms;
+}
+
+#Awesome:hover .front .circle{
+	margin-top: -90px;
+	background-color: #e2d439;
+	background-position: 0 100px;
+}
+
+/*MainMenu*/
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 46px;
+  width: 46px;
+}
+
+.menu-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1002;
+}
+
+.menu-icon {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 1px;
+}
+
+/* ------------- */
+.menu-line {
+  background-color: #00acff;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}
+.menu-line-2 {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.menu-line-3 {
+  bottom: 0;
+}
+.menu.open .menu-line-1 {
+  transform: translateY(7px) translateY(-50%) rotate(-45deg);
+}
+.menu.open .menu-line-2 {
+  opacity: 0;
+}
+.menu.open .menu-line-3 {
+  transform: translateY(-7px) translateY(50%) rotate(45deg);
+}
+
+/* ------------- */
+.menu-circle {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+.menu:hover .menu-circle {
+  transform: scale(1.5);
+}
+.menu.open .menu-circle {
+  transform: scale(100);
+}
+
+/* ------------- */
+.menu-overlay {
+  background-color: #fff;
+  color: #333;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ------------- */
+
+ol {
+	list-style-type: none;
+  font-size: 50px;
+}
+
+ol li:hover{
+  color: #00acff;
+}
+
+/*end MainMenu*/
+
+
+/*MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNx,    .l0WMMMMMMM
+lllllllllloodxkOKXWMMMMMMMMMMMWXKKKKKXXXXXXNNNNNNNWMMMMMMMMMMKc.       .oKWMMMMM
+                ..;lONMMMMMMMMNl..............''',dNMMMMMMMWO,           'xNMMMM
+                     'dXMMMMMMMk.                 ,KMMMMMMM0,             .oNMMM
+                       'xNMMMMMX:                 .kMMMMMMNc               .oNMM
+                        .cXMMMMMx.                .dWMMMMMk.                .dWM
+                          ;KMMMMK;                 cNMMMMX:                  'OM
+                           ;KMMMWo                 ;XMMMMO.                   cN
+                            :XMMM0'                ,KMMMWd                    .O
+                             oNMMN:                .OMMMX:                     o
+                             .OMMWd.               .kMMM0'                     :
+              .,,.            cNMMO.               .xMMMx.                     '
+              'OWO;           .OMMK,               .dMMWo                      .
+              .xMM0'           oWMNc                dWMX:        .lx,          .
+               oWMNl           :NMWo                dWMK,        cNWo
+               cNMMx.          ,KMWd.               dWMk.       .xMWd.
+               ;XMMO.          '0MMx.         .'.  .dWMx.       '0MWd
+               ,KMM0'          .OMMx.        .kNX0kxKMWo        ;XMWl
+               '0MMK,          .OMMx.        .OMMMMMMMN:        cNMN:
+               '0MMK,          '0MWd.        '0MMMMMMMK,        oWMK,
+               ,KMM0,          ,KMWl         ,KMMMMMMMO.       .xMMO.
+               ;XMMO.          :NMX:         :NMMMMMMWd        .OMMx.
+               cNMMk.          oWM0'         oWMMMMMMNc        ,KMWo
+               lWMWo          .kMMx.        .kMMMMMMM0,        cNMNc
+              .dMMNc          ,KMNc         ,0MMMMMMMx.        oWMX;
+              .kMMK,          lWM0'         lNMMMMMMNc        .kMM0'
+              '0MMk.         .kMWd.         ,x0NWMMM0'        ,KMMk.           .
+              ;XMWo          :XMX;            ..c0MWd.        cNMWd         .:d0
+              lNMX:         .dWMk.              '0MX:         dWMNc    .':oOXWMM
+             .dMM0'         ,KMNc               oWMk.        .OMMNo,:lx0NWMMMMMM
+             .kMMk.         oWMO.              '0MNc         ,KMMWNNMMMMMMMMMMMM
+             ,0MWo         .OMNc               lNMO.         cNMMMMMMMMMMMMMMMMM
+             :XMX:         cNMO'              .OMWl         .xMMMMMMMMMMMMMMMMMM
+             lWM0'        .kMWo               cNM0,         '0MMMMMMMMMMMMMMMMMM
+            .xMMx.        ;XMK,        ';'.  .kMWd.         ;XMMMMMMMMMMMMMMMMMM
+            .OMWl         dWWx.       ,KWN0xlxNMX;          oWMMMMMMMMMMMMMMMMMM
+            ,KMX:        'OMNc        oWMMMMMMMMk.         .xMMMMMMMMMMMMMWX0koc
+            :XM0'        :XM0'       .kMMMMMMMMWo          '0MMMWNXX0Okdl:,..
+            lWMk.        dWMx.       ;KMMMMMMMMX;          ;XMMWx,...
+           .dWWo        .OMWo        cNMMMMMMMMO.          cNMMN:
+           .kMNc        ,KMN:        dWMMMMMMMMx.          oWMMX;
+           '0MK;        :NMK,       .kMMMMMMMMWo          .dMMMK,
+           ;KMO.        oWM0'       .OMMMMMMMMWo          .xMMMK,
+           :NWd.       .xMMO.       '0MMMMMMMMWl          .xMMMK,
+           lWX:        .kMMk.       '0MMMMMMMMWo          .dWMMX;
+           dWx.        .OMMx.        ,ldxk0XNMMx.          lWMMNc
+          .co.         ,KMMx.             ..:KMO.          cNMMWo              .
+                       ;XMMx.               .kMK;          ,KMMMd.             .
+                       :NMMx.                oWWo          .xMMMx.             '
+                       lWMMk.                cNMO'          :XMMx.             :
+                       oWMMk.                '0MNl           ;xk;              o
+                      .xMMMO'                .xMMK,                           .k
+                      .OMMMK,                 cNMWk.                          :X
+                      ;KMMMX;                 '0MMWd.                        .xW
+                      oWMMMNc                  oWMMNd.                       cNM
+                     '0MMMMWd                  ,KMMMWx.                     ,0MM
+                    .xWMMMMMk.                 .dWMMMWO,                   'OWMM
+                   .xNMMMMMM0,                  ,KMMMMMXo.                'kWMMM
+           .....,:dKWMMMMMMMNd''''...............xWMMMMMW0c.             ,OWMMMM
+loodxxkkOO00KKXNWWMMMMMMMMMMMWNNNNNNXXXXXXKKKKK00XWMMMMMMMW0o'.        .oXMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx;.    .c0WMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWXOkKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOxdoc::::;...;o0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMWKd:.               .oKNWMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMNk:.                    .';okKNWMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMW0:.                           .':d0NMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMWk'                                 .,xNMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMWk'                  .                  ,kWMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMWk.            .....';:,,;:ccc::;'''...   .cKMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMWx.            ..':cccoxxkO0KKKK00kkkkxo:'.  ;KMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMWx.           ..'';oxkO00KXXXNNNNXXXKKKK0kxl,..:XMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMWx.         .....;lxO0KKXXNNNNNNNXXXKKKK000Okxo;:0MMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMNd.   .    .';lllodO0KXXXXXXXXXXXXXXKKKK0000OOkxdokWMMMMMMMMMMM
+MMMMMMMMMMMMMMMMWd.    .   .,dkkO00KKKKXXXXXXXNXXXXXXKKKK0000OOkkdokNMMMMMMMMMMM
+MMMMMMMMMMMMMMMMO.    ... ..cOKKXXXXXXXXXXXXXNNNNNXXXXXKKKK000OkxdoOWMMMMMMMMMMM
+MMMMMMMMMMMMMMMWo..cooc,...;xKXXXXXXK0OkkxdlcccoxOKXXXKKKKKK000OxddKMMMMMMMMMMMM
+MMMMMMMMMMMMMMMK;,xO0KOl::cd0XXNNXXXK00000Oxoc;...,cdO000000000OkxkXMMMMMMMMMMMM
+MMMMMMMMMMMMMMWo.dKXNKOdlloOXNNNNNXK0kxolllc:cccc:;;cdO000OOOOkxxdkNMMMMMMMMMMMM
+MMMMMMMMMMMMMMK;.xNKOxk0kxkKXNNNNNX0xc,.  .  ...,oxxxkO0OOkxo:,'..'dNMMMMMMMMMMM
+MMMMMMMMMMMMMMO. oX0O0XX0O0XXNNNNNNNXKkoc:,...,..:dkO0KK0kdl;'....'oNMMMMMMMMMMM
+MMMMMMMMMMMMMWo. cKNNXKK0O0KKXNNNNNNNNXK00kdlcc::d00KXNX0o'.... .'xNMMMMMMMMMMMM
+MMMMMMMMMMMMMO.  .l0XKKK0000KXXXNNNNNNNNXXK00OO0KXXXXNNXO;  .'. .dNMMMMMMMMMMMMM
+MMMMMMMMMMMMMx.    'd00KK000KKXXXXNNNNNNNNNXXXXXXXNNNNNXOl;'''.:0WMMMMMMMMMMMMMM
+MMMMMMMMMMMMMk.   ...;lkKKKKKKKKXXXXNXXXXXXXKKKXXXXNNNNX0xoooc:xNMMMMMMMMMMMMMMM
+MMMMMMMMMMMMM0'  .;..'oOKXKKKKKKKXXXXXXXXKKK000KKKKXNNNNKkxOOkxKMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMWo.cl;,:oxk0XKKKKKKKKKKKKKK000OO00KXXXXXNNNKOkOOkONMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMKxo:cc.;xkOKKKKKKKKKKKK0000000KK0OdooxO000OkkkkkXMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMW0kKl.;OOkO0KKKKKKKKK000000KXXXKKOxoooodxdddxOXMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMWx:k0OOkk00KKKKKKK0OOxxxkO00KKK0OxdddddoxKWMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMWKc,d00K0xkO00KKKK0000kdoccc::codddodxdx0NMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMKc. ,k00XKOxxk00KKKKKKKK0Oxoc:;,,,'',cdOXMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMWo  .o0O0XXKOkkkOO0KKKKKKK00kdlc::;::lxXWMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMWx.  .;:d0KXKOOkkkO0KKXXXXXK0Oxdoollo0WMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMX;      .,:llooooolox0KKKKKK0kxdooxXMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMWXo.              ..  ..,:ccoddolcdXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMW0o:.                                .oKWMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMWNXXOc.                                     .,cd0NMMMMMMMMMMMMMMMMMMMMMMMM
+WX0xxd:'..                                            .;kWMMMMMMMMMMMMMMMMMMMMMM
+,.                                                       ,cdOKNWMMMMMMMMMMMMMMMM
+                                                             .';ok0KNWMMMMMMMMMM
+                                                                   ..:dOXWMMMMMM
+                                                                        .;lxXMMM
+                                                                            'o0W
+                                                                              'O
+............................................................................../*
