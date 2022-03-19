@@ -1,18 +1,30 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title>DEC | 3D Design</title>
     <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="description" content="3D Design">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Duculet EMILIA Cristina | DEC" />
+    <link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
     <link type="text/css" href="styles.css" rel="stylesheet"/>
     <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    </script>
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+</head>
 
-    <body>
-       <div class="cursor"></div>
+  <body lass="bodyx" >
+  <div class="cursor"></div>
   <div class="cursor-border"></div>
   <div class="frame">
 
@@ -24,6 +36,8 @@
   <a href="https://emiliacristina.github.io/portfolio2022/contact.html" class="frame__demo">Contact</a>	
   </div>
 	</div>
+
+
     <!-- <model-viewer> HTML element -->
     <model-viewer  bounds="tight" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"  shadow-intensity="1">
     <div class="progress-bar hide" slot="progress-bar"></div>
