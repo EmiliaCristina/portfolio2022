@@ -37,7 +37,7 @@ body {
 	--color-reveal-bg: var(--color-bg);
 	color: var(--color-text);
 	background-color: var(--color-bg);
-	font-family: transat-text, sans-serif;
+	font-family: 'Playfair Display', serif; 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -141,7 +141,7 @@ body {
 }
 
 a {
-	font-family: "Canela";
+	font-family: 'Playfair Display', serif; 
 	text-decoration: none;
 	color: var(--color-link);
 	outline: none;
@@ -164,7 +164,7 @@ main {
 .frame__title {
 	font-size: 1rem;
 	margin: 0 0 1rem;
-		font-family: "Canela";
+		font-family: 'Playfair Display', serif; 
 }
 
 .frame__links a {
@@ -237,7 +237,7 @@ main {
 }
 
 .content__item-header-title {
-	font-family:  "Canela";
+	font-family:  'Playfair Display', serif; 
 	font-weight: 600;
 	font-size: 3rem;
 	margin: 0;
@@ -268,7 +268,7 @@ main {
 
 .content__item-copy-more {
 
-	font-family:'Canela';
+	font-family:'Playfair Display', serif; 
 	font-size: 25px;
 	color: white;
 	}
@@ -358,7 +358,7 @@ main {
 .grid__item--title {
 	font-size: 13vw;
 	margin: 0;
-		font-family: "Canela";
+		font-family: 'Playfair Display', serif; 
 	font-weight: 600;
 	color: var(--color-title);
 }
@@ -579,7 +579,7 @@ main {
 		max-width: 240px;
 		justify-self: end;
 		text-align: right;
-		font-family: "Canela";
+		font-family: 'Playfair Display', serif; 
 
 	}
 
