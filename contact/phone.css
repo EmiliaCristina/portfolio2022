@@ -63,12 +63,12 @@
   padding: 40px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  font-family: "sans-serif";
+  font-family: 'Playfair Display', serif;
   font-size: 22px;
 }
 
 .title {
-  font-family: "Canela";
+  font-family: 'Playfair Display', serif;
   color:#ff66cc;
   font-size: 40px;
 }
@@ -77,7 +77,7 @@
   padding-top: 60px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  font-family: "sans-serif";
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
 }
 
@@ -166,7 +166,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color:#00cbff;
-  font-family: "Canela";
+  font-family: 'Playfair Display', serif;
 }
 
 model-viewer {
@@ -277,12 +277,12 @@ a:hover{
 }
 
 .content__inner-item:nth-child(3n-1) {
-	font-family: titling-gothic-fb-narrow, sans-serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 100;
 	text-transform: uppercase;
 }
 
 .content__inner-item:nth-child(3n) {
-	font-family: titling-gothic-fb-extended, sans-serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 200;
 }
