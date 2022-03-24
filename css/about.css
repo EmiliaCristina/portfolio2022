@@ -223,6 +223,7 @@ a:focus {
 .frame__links {
 	display: inline;
 	font-size: 25px;
+	font-family: 'Playfair Display', serif;
 }
 
 .frame__links a:not(:last-child),
