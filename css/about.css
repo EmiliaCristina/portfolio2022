@@ -189,7 +189,7 @@ a {
 	text-decoration: none;
 	color: var(--color-link);
 	outline: none;
-		font-family: "Canela";
+		font-family: 'Playfair Display', serif; 
 }
 
 a:hover,
