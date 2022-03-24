@@ -1,7 +1,7 @@
 
 body {
 
-	font-family: 'Canela';
+	font-family: 'Playfair Display', serif; 
 	background-color: #00cbff;
 
 }
@@ -56,7 +56,7 @@ body {
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
-	font-family: 'Canela';
+	font-family: 'Playfair Display', serif; 
 }
 
 #myBtn:hover {
