@@ -262,7 +262,7 @@ main {
 
 .content__item-copy {
 	padding: 2rem;
-	font-family: linotype-didot, serif;
+	font-family: 'Playfair Display', serif; 
 	color: black;;
 }
 
