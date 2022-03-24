@@ -37,7 +37,7 @@ ul li {
 
  padding: 0 0 4px 30px;
  margin-left: 1em;
- font-family: condor-compressed, sans-serif;
+ font-family: 'Playfair Display', serif; 
  font-size: 3vw;
 }
 
@@ -323,7 +323,7 @@ a:focus {
 .two{
 
         color:#fff;
-        font-family: condor-compressed, sans-serif;
+        font-family: 'Playfair Display', serif; 
         font-size: 45px;
 
 
