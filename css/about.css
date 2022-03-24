@@ -300,6 +300,7 @@ a:focus {
 		grid-area: links;
 		padding: 0;
 		justify-self: end;
+		font-family: 'Playfair Display', serif;
 	}
 
 	.frame a {
