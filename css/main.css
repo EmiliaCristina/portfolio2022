@@ -701,6 +701,12 @@ ol {
   font-size: 50px;
 }
 
+@media (max-width: 479px) {
+   ol {
+         float: right;
+    }
+}
+
 ol li:hover{
   color: #00acff;
 }
