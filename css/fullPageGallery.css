@@ -1,7 +1,7 @@
 
 body {
 
-	font-family: 'Canela';
+	font-family: 'Playfair Display', serif;
 	background-color: #00cbff;
 
 }
@@ -46,7 +46,7 @@ a:focus {
 /*backButton*/
 p {
   color: #fff;
-  font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1em;
   font-weight: 700;
 	height: 10px;
@@ -133,7 +133,7 @@ p span + span {
   padding: 0.5em 1.0em;
   border-radius: 4px;
   background: transparent;
-  font-family: 'Canela';
+  font-family: 'Playfair Display', serif;
   font-size: 25px;
   cursor: pointer;
   border:none;
