@@ -20,7 +20,7 @@ body {
 	--color-blocktitle: #fff;
 	--color-blocktitle-hover:#ff42ae;
 	--color-text: #767676;
-	font-family: 'Canela';
+	font-family: 'Playfair Display', serif;
 	min-height: 100vh;
 	color: #57585c;
 	color: var(--color-text);
