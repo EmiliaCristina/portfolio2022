@@ -1,5 +1,5 @@
 
-html {  font: normal 1em/1.5 "Canela"; color: #fff; text-align: center; height: 100%; }
+html {  font: normal 1em/1.5 'Playfair Display', serif; color: #fff; text-align: center; height: 100%; }
 
 /* custom cursor style*/
 .cursor,
@@ -38,7 +38,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color:#1ddcf5;
-  font-family: "Canela";
+  font-family: 'Playfair Display', serif;
   font: normal 1em/1.5;
 }
 
@@ -176,7 +176,7 @@ model-viewer {
 }
 
  .title{
-  font-family: "Canela";
+  font-family:'Playfair Display', serif;
   color: #ff66cc;
   z-index: 2;
   font-size: 30px;
@@ -221,7 +221,7 @@ a:focus {
 /*backButton*/
 p {
   color: #fff;
-  font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1em;
   font-weight: 700;
 	height: 10px;
