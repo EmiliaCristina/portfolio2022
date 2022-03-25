@@ -16,7 +16,7 @@ body {
   --cursor-stroke-width: 1px;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: ivymode, sans-serif;
+	font-family: 'Playfair Display', serif;
 }
 
 /* custom cursor style*/
@@ -56,7 +56,7 @@ body {
 /*backButton*/
 p {
   color: #fff;
-  font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1em;
   font-weight: 700;
 	height: 10px;
@@ -166,7 +166,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Canela", sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 a, a:visited, a:hover {
