@@ -113,6 +113,9 @@ h1, h1 a {
   font-size: 60px;
 }
 
+p{
+  color:black;}
+
 ul {
   position: relative;
   display: flex;
